@@ -1,82 +1,65 @@
-# 🌍 Climate Change Analysis – Week 0 Project
+📘 Climate Challenge Week 0
+🌍 Project Overview
 
-## 📌 Project Overview
-This project analyzes climate data for multiple African countries (Ethiopia, Kenya, Nigeria, Sudan, and Tanzania). The goal is to explore temperature trends, rainfall patterns, and extreme weather conditions to understand climate vulnerability.
+This project is part of the Climate Challenge Week 0 assignment.
+It introduces a simple Streamlit-based application for exploring basic climate-related data and building foundational skills in Python data applications, Git workflow, and environment setup.
 
----
+⚙️ Tech Stack
+Python 3.10+
+Streamlit
+Pandas
+Jupyter Notebook (if used)
+Git & GitHub
+📁 Project Structure
+climate-challenge-week0/
+│
+├── app/
+│   └── main.py
+│
+├── data/
+├── notebooks/
+├── .gitignore
+├── README.md
+└── requirements.txt
+🚀 Environment Setup
+1. Clone the repository
+git clone https://github.com/Bethabrh/climate-challenge-week0.git
+cd climate-challenge-week0
+2. Create virtual environment
+python -m venv .venv
+3. Activate environment
 
-## 📂 Dataset
-The dataset includes daily climate variables such as:
-- Temperature (T2M, T2M_MAX, T2M_MIN)
-- Rainfall (PRECTOTCORR)
-- Humidity (RH2M)
-- Wind speed (WS2M)
-- Surface pressure (PS)
+Windows (PowerShell):
 
-Countries analyzed:
-- Ethiopia
-- Kenya
-- Nigeria
-- Sudan
-- Tanzania
+.venv\Scripts\activate
+📦 Install dependencies
+pip install -r requirements.txt
 
----
+If Streamlit is not installed:
 
-## 🔧 Steps Performed
+pip install streamlit
+▶️ Run the application
+python -m streamlit run app/main.py
+📓 Running Notebooks (if applicable)
 
-### 1. Data Cleaning
-- Handled missing values
-- Created date and month columns
-- Standardized datasets for all countries
-- Saved cleaned versions as CSV files
+If Jupyter notebooks are included:
 
-### 2. Exploratory Data Analysis (EDA)
-- Analyzed temperature trends
-- Visualized rainfall distribution
-- Checked data distributions and anomalies
+jupyter notebook
 
-### 3. Comparative Analysis
-- Merged datasets across countries
-- Compared average temperature and rainfall
-- Identified extreme heat conditions
+Then open files inside the notebooks/ folder.
 
-### 4. Climate Vulnerability Insights
-- Ranked countries based on climate risk indicators
-- Evaluated temperature, rainfall, and extreme weather patterns
+📌 Features (Current)
+Basic Streamlit interface
+Climate data display structure
+Clean project organization
+Git-based workflow
+🧭 Roadmap (Future Improvements)
+Add interactive climate visualizations
+Integrate real climate datasets (CSV/API)
+Improve UI with Streamlit components
+Add data analysis dashboard
+Deploy app online (Streamlit Cloud)
+👤 Author
 
----
+Bethel
 
-## 📊 Key Insights
-- Countries show significant differences in rainfall variability
-- Temperature trends indicate regional climate stress differences
-- Some countries are more vulnerable to drought and heat conditions
-- Climate risks vary strongly across East and West Africa
-
----
-
-## 📁 Project Structure
-notebooks/
-ethiopia_eda.ipynb
-compare_countries.ipynb
-
-data/
-*_clean.csv
-
-requirements.txt
-README.md
-
-
----
-
-## 🚀 Tools Used
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- SciPy
-
----
-
-## 📌 Author
-Climate Data Analysis Project – Week 0 Submission
