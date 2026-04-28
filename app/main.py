@@ -1,5 +1,34 @@
 import streamlit as st
+import pandas as pd
 
+def load_data(file_path):
+    """Load dataset safely"""
+    try:
+        df = pd.read_csv(file_path)
+        print(f"Loaded data successfully from {file_path}")
+        return df
+    except FileNotFoundError:
+        print(f"File not found: {file_path}")
+        return None
+    except Exception as e:
+        print(f"Error loading file: {e}")
+        return None
+
+
+def clean_data(df):
+    """Basic cleaning pipeline"""
+    if df is None:
+        return None
+
+    df = df.drop_duplicates()
+    df = df.fillna(method="ffill")
+
+    return df
+kenya = clean_data(load_data("data/kenya.csv"))
+sudan = clean_data(load_data("data/sudan.csv"))
+tanzania = clean_data(load_data("data/tanzania.csv"))
+nigeria = clean_data(load_data("data/nigeria.csv"))
+ethiopia = clean_data(load_data("data/ethiopia.csv"))
 st.title("🌍 Climate Change Dashboard")
 
 st.header("About Climate Change")
@@ -7,6 +36,10 @@ st.write("""
 Climate change refers to long-term shifts in temperature and weather patterns.
 These changes may be natural, but human activities have been the main driver since the 1800s.
 """)
+if kenya is None or sudan is None or tanzania is None:
+    st.error("One or more datasets failed to load.")
+else:
+    st.success("All datasets loaded successfully!")
 
 st.header("Key Issues")
 st.write("- Rising global temperatures")
@@ -18,34 +51,53 @@ st.success("This is my first climate app using Streamlit 🚀")
 
 
 
-# Kenya EDA section
-# - Kenya climate data analyzed separately
-# - Observed rainfall trends and missing values handled
-# - Added country-specific insights
+st.subheader("🇰🇪 Kenya EDA")
+
+if kenya is not None:
+    st.write("### Dataset Preview")
+    st.dataframe(kenya.head())
+
+    st.write("### Summary Statistics")
+    st.write(kenya.describe())
 
 
-# Sudan EDA section
-# - Cleaned Sudan dataset (handled missing values and duplicates)
-# - Explored rainfall and temperature trends
-# - Generated summary insights for Sudan climate patterns
+st.subheader("🇸🇩 Sudan EDA")
 
+if sudan is not None:
+    st.write("### Dataset Preview")
+    st.dataframe(sudan.head())
 
-# Tanzania EDA section
-# - Cleaned Tanzania dataset
-# - Analyzed rainfall and temperature patterns
-# - Generated insights from exploratory analysis
+    st.write("### Summary Statistics")
+    st.write(sudan.describe())
+
+st.subheader("🇹🇿 Tanzania EDA")
+
+if tanzania is not None:
+    st.write("### Dataset Preview")
+    st.dataframe(tanzania.head())
+
+    st.write("### Summary Statistics")
+    st.write(tanzania.describe())
    
-=======
+   st.subheader("🇪🇹 Ethiopia EDA")
+
+if ethiopia is not None:
+    st.write("### Dataset Preview")
+    st.dataframe(ethiopia.head())
+
+    st.write("### Summary Statistics")
+    st.write(ethiopia.describe())
 
 
 
 
 
+st.subheader("🇳🇬 Nigeria EDA")
 
+if nigeria is not None:
+    st.write("### Dataset Preview")
+    st.dataframe(nigeria.head())
 
-
-  # Kenya EDA section
-# - Kenya climate data analyzed separately
-# - Observed rainfall trends and missing values handled
-# - Added country-specific insights     
+    st.write("### Summary Statistics")
+    st.write(nigeria.describe())    
 
