@@ -16,6 +16,12 @@ st.write("- Extreme weather events")
 
 st.success("This is my first climate app using Streamlit 🚀")
 
+   # Nigeria EDA section
+# - Cleaned Nigeria dataset
+# - Explored rainfall variability
+# - Identified temperature distribution patterns
+=======
+
 
 
 
@@ -29,3 +35,4 @@ st.success("This is my first climate app using Streamlit 🚀")
 # - Kenya climate data analyzed separately
 # - Observed rainfall trends and missing values handled
 # - Added country-specific insights     
+
