@@ -15,4 +15,7 @@ st.write("- Sea level rise")
 st.write("- Extreme weather events")
 
 st.success("This is my first climate app using Streamlit 🚀")
-   
+   # Ethiopia EDA section
+# - Cleaned Ethiopia dataset
+# - Analyzed rainfall and temperature trends
+# - Generated summary insights
