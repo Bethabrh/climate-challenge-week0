@@ -15,4 +15,22 @@ st.write("- Sea level rise")
 st.write("- Extreme weather events")
 
 st.success("This is my first climate app using Streamlit 🚀")
+
+
+# Kenya EDA section
+# - Kenya climate data analyzed separately
+# - Observed rainfall trends and missing values handled
+# - Added country-specific insights
+
+
+# Sudan EDA section
+# - Cleaned Sudan dataset (handled missing values and duplicates)
+# - Explored rainfall and temperature trends
+# - Generated summary insights for Sudan climate patterns
+
+
+# Tanzania EDA section
+# - Cleaned Tanzania dataset
+# - Analyzed rainfall and temperature patterns
+# - Generated insights from exploratory analysis
    
