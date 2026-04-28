@@ -15,4 +15,7 @@ st.write("- Sea level rise")
 st.write("- Extreme weather events")
 
 st.success("This is my first climate app using Streamlit 🚀")
-   
+   # Nigeria EDA section
+# - Cleaned Nigeria dataset
+# - Explored rainfall variability
+# - Identified temperature distribution patterns
